@@ -11,6 +11,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+app.get('/api', (req, res) => {
+    res.status(200).json({ message: 'Welcome to the API!' });
+});
 // Routes
 app.use('/api/auth', authRoutes);
 
